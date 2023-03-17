@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  color: #EEEEEE;
+  font-family: "Sora", sans-serif;
+}
+
+body {
+  background: url("./../images/2.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.ebooks h2 {
+  margin: 0 10%;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .slide-container {
+  max-width: 90%;
+  width: 100%;
+  padding: 40px 0;
+}
+.container .slide-container .slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+}
+.container .slide-container .slide-content .card-wrapper .card {
+  border-radius: 25px;
+  background: #393E46;
+}
+.container .slide-container .slide-content .card-wrapper .card .image-content {
+  row-gap: 5px;
+  position: relative;
+  padding: 25px 0;
+}
+.container .slide-container .slide-content .card-wrapper .card .image-content .overlay {
+  border-radius: 25px 25px 0 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #222831;
+}
+.container .slide-container .slide-content .card-wrapper .card .image-content .card-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+}
+.container .slide-container .slide-content .card-wrapper .card .image-content .card-image .card-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid #FFD369;
+}
+.container .slide-container .slide-content .card-wrapper .card .card-content .description {
+  line-height: 1.5rem;
+  color: #EEEEEE;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.container .slide-container .slide-content .card-wrapper .card .card-content .button {
+  border: none;
+  font-size: 16px;
+  color: #EEEEEE;
+  padding: 8px 16px;
+  background: #222831;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.container .slide-container .slide-content .card-wrapper .card .card-content .button:hover {
+  color: #222831;
+  background: #FFD369;
+}
+.container .slide-container .swiper-navBtn {
+  color: #393E46;
+  transition: color 0.3s ease;
+}
+.container .slide-container .swiper-navBtn:hover {
+  color: #FFD369;
+}
+.container .slide-container .swiper-navBtn::before,
+.container .slide-container .swiper-navBtn::after {
+  font-size: 40px;
+}
+.container .slide-container .swiper-button-next {
+  right: 0;
+}
+.container .slide-container .swiper-button-prev {
+  left: 0;
+}
+.container .slide-container .swiper-pagination-bullet {
+  background: #393E46;
+  opacity: 1;
+}
+.container .slide-container .swiper-pagination-bullet-active {
+  background: #FFD369;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+@media screen and (max-width: 1580px) {
+  .description {
+    min-height: 200px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ebooks h2 {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+@import "./var";
+
+* {
+    color: $fourth-color;
+    font-family: $font;
+}
+
+body {
+    background: url("./../images/2.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

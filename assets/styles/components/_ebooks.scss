@@ -1,0 +1,158 @@
+@import "./../abstract/var";
+
+.ebooks {
+    h2 {
+        margin: 0 10%;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .slide-container {
+        max-width: 90%;
+        width: 100%;
+        // background: gray;
+        padding: 40px 0;
+        
+
+        .slide-content {
+            margin: 0 40px;
+            overflow: hidden;
+            
+
+            .card-wrapper {
+                .card {
+                    border-radius: 25px;
+                    background: $second-color;
+                    
+
+                    .image-content {
+                        row-gap: 5px;
+                        position: relative;
+                        padding: 25px 0;
+                        
+
+                        .overlay {
+                            border-radius: 25px 25px 0 0;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            width: 100%;
+                            background-color: $first-color;
+                            
+                        }
+
+                        .card-image {
+                            position: relative;
+                            width: 150px;
+                            height: 150px;
+                            padding: 3px;
+                            
+                        
+                            .card-img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                                border-radius: 15px;
+                                border: 2px solid $third-color;
+                            }
+                        }
+                    }
+
+                    .card-content {
+                        
+                        .description {
+                            line-height: 1.5rem;
+                            color: $fourth-color;
+                            text-align: center;
+                            min-height: 100px;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .button {
+                            border: none;
+                            font-size: 16px;
+                            color: $fourth-color;
+                            padding: 8px 16px;
+                            background: $first-color;
+                            border-radius: 6px;
+                            margin: 14px;
+                            cursor: pointer;
+                            transition: all 0.5s ease;
+                        }
+
+                        .button:hover {
+                            color: $first-color;
+                            background: $third-color;
+                        }
+                    }
+                }
+
+            }
+        }
+        .swiper-navBtn {
+            color: $second-color;
+            transition: color .3s ease;
+        }
+        .swiper-navBtn:hover {
+            color: $third-color;
+        }        
+        .swiper-navBtn::before,
+        .swiper-navBtn::after {
+            font-size: 40px;
+        }        
+        .swiper-button-next {
+            right: 0;
+        }        
+        .swiper-button-prev {
+            left: 0;
+        }        
+        .swiper-pagination-bullet {
+            background: $second-color;
+            opacity: 1;
+        }        
+        .swiper-pagination-bullet-active {
+            background: $third-color;
+        }
+    }
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+@media screen and (max-width: 1580px) {
+    .description {
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ebooks {
+        h2 {
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none;
+    }
+}
