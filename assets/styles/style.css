@@ -10,12 +10,17 @@ body {
   background-attachment: fixed;
 }
 
+.widgets {
+  position: fixed;
+  z-index: 99;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 10%;
-  padding: 1rem 0;
+  padding: 3% 0 1rem 0;
 }
 nav .logo {
   color: #EEEEEE;
