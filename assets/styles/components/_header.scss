@@ -1,0 +1,35 @@
+@import "./../abstract/var";
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%;
+    padding: 1rem 0;
+    .logo {
+        color: $fourth-color;
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: $font;
+        text-shadow: 0 0 10px $third-color;
+    }
+    .social-media{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        img{
+            width: 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        .logo {
+            font-size: 1.25rem;
+        }
+        .social-media{
+            gap: .3rem;
+        }
+    }
+}

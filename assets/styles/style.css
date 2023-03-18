@@ -10,8 +10,141 @@ body {
   background-attachment: fixed;
 }
 
-.ebooks h2 {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 10%;
+  padding: 1rem 0;
+}
+nav .logo {
+  color: #EEEEEE;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Sora", sans-serif;
+  text-shadow: 0 0 10px #FFD369;
+}
+nav .social-media {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+nav .social-media img {
+  width: 35px;
+}
+
+@media screen and (max-width: 550px) {
+  nav .logo {
+    font-size: 1.25rem;
+  }
+  nav .social-media {
+    gap: 0.3rem;
+  }
+}
+.courses-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+.courses-container .course-description {
+  width: 33%;
+  margin-left: 11%;
+  color: #EEEEEE;
+}
+.courses-container .course-description h1 {
+  font-size: 3rem;
+  font-family: "Sora", sans-serif;
+  border-bottom: 2px solid #FFD369;
+  padding-bottom: 2rem;
+}
+.courses-container .course-description p {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #EEEEEE;
+}
+.courses-container .carousel {
+  height: 50vh;
+  width: 50%;
+}
+.courses-container .carousel .carousel-inner {
+  box-shadow: 0 0 120px 15px black;
+}
+.courses-container .carousel .carousel-inner .carousel-item {
+  overflow: hidden;
+}
+.courses-container .carousel .carousel-inner .carousel-item .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.5);
+}
+.courses-container .carousel .carousel-inner .carousel-item .image-data {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.courses-container .carousel .carousel-inner .carousel-item .image-data h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #EEEEEE;
+}
+.courses-container .carousel .carousel-inner .carousel-item .image-data .button-course {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  color: #FFD369;
+  background: #222831;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: all 0.5s ease;
+}
+.courses-container .carousel .carousel-inner .carousel-item .image-data .button-course:hover {
+  color: #222831;
+  background: #FFD369;
+  font-weight: 600;
+}
+
+.carousel-inner,
+.carousel-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+  .courses-container .course-description {
+    margin-left: 3%;
+  }
+  .courses-container .carousel {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .courses-container {
+    display: block;
+  }
+  .courses-container .course-description {
+    width: 90%;
+    text-align: center;
+    margin: 15% auto 5% auto;
+  }
+  .courses-container .carousel {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .courses-container .course-description {
+    width: 95%;
+  }
+}
+.ebooks h2 {
+  margin: 10% 10% 0 10%;
   font-size: 2rem;
   font-weight: 600;
 }
